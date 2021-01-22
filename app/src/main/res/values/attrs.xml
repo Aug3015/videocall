@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTextViewFonts">
+        <attr name="font_type" format="string" />
+    </declare-styleable>
+
+    <string name="linotte_bold">fonts/r0c0i_linotte_bold.ttf</string>
+    <string name="linotte_light">fonts/r0c0i_linotte_light.ttf</string>
+    <string name="linotte_regular">fonts/r0c0i_linotte_regular.ttf</string>
+    <string name="linotte_semi">fonts/r0c0i_linotte_semi_bold.ttf</string>
+
+</resources>

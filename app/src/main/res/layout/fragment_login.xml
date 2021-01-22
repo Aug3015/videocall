@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu">
+
+    <com.leo.videocall.customview.CustomTextViewFonts
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/video_call"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:font_type="@string/linotte_semi"
+        app:layout_constraintBottom_toTopOf="@+id/tvUsername"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.leo.videocall.customview.CustomTextViewFonts
+        android:id="@+id/tvUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="16dp"
+        android:text="@string/user_name"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:font_type="@string/linotte_bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <com.leo.videocall.customview.CustomTextViewFonts
+        android:id="@+id/edtUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_stroke_corner_5"
+        android:paddingLeft="11dp"
+        android:paddingTop="8dp"
+        android:paddingRight="11dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:font_type="@string/linotte_regular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnNext"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername" />
+
+
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_solid_white_corner_5"
+        android:paddingLeft="24dp"
+        android:paddingTop="8dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/ic_bi_arrow_right"
+        app:layout_constraintLeft_toRightOf="@+id/edtUsername"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtUsername" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_solid_corner_5"
+        android:orientation="horizontal"
+        android:paddingTop="33dp"
+        android:paddingBottom="33dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.leo.videocall.customview.CustomTextViewFonts
+            android:id="@+id/btnFriend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="34dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_solid_white_corner_5"
+            android:drawableTop="@drawable/ic_feather_mic"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="34dp"
+            android:paddingBottom="34dp"
+            android:text="@string/friend"
+            android:textColor="#2F80ED"
+            android:textSize="18sp"
+            app:font_type="@string/linotte_bold" />
+
+        <com.leo.videocall.customview.CustomTextViewFonts
+            android:id="@+id/btnCallRoom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginBottom="33dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_solid_white_corner_5"
+            android:drawableTop="@drawable/ic_ion_add_circle_outline"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingTop="34dp"
+            android:paddingBottom="34dp"
+            android:text="@string/call_room"
+            android:textColor="#2F80ED"
+            android:textSize="18sp"
+            app:font_type="@string/linotte_bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
