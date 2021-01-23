@@ -1,5 +1,6 @@
 package com.leo.videocall.utils;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,6 +10,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -196,6 +198,7 @@ public class CommonUtils {
         }
         return false;
     }
+
     public static boolean checkPassport(EditText editText) {
 
         if (editText.getText() != null) {
@@ -206,6 +209,7 @@ public class CommonUtils {
         }
         return false;
     }
+
     public static boolean checkNumberPhone(EditText editText) {
 
         if (editText.getText() != null) {
@@ -313,5 +317,6 @@ public class CommonUtils {
         view.draw(canvas);
         return returnedBitmap;
     }
+
 
 }
