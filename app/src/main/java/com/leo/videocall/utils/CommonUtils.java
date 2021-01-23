@@ -20,6 +20,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.leo.videocall.MyApplication;
+import com.leo.videocall.R;
+import com.leo.videocall.customview.CustomEditTextFonts;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
@@ -28,9 +32,6 @@ import java.util.Date;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
-import tcom.trinhnd.foodcor.MyApplication;
-import tcom.trinhnd.foodcor.R;
-import tcom.trinhnd.foodcor.customview.CustomEditTextFonts;
 
 public class CommonUtils {
     public static ProgressDialog showLoadingDialog(Context context) {
@@ -165,16 +166,16 @@ public class CommonUtils {
         return number;
     }
 
-    public static String getExactUrl(String firstUrl) {
-        if (firstUrl == null) {
-            return "";
-        }
-        if (firstUrl.contains("http://")) {
-            return firstUrl;
-        }
-        String result = MyApplication.getInstance().BASE_IMAGE_URL + firstUrl;
-        return result;
-    }
+//    public static String getExactUrl(String firstUrl) {
+//        if (firstUrl == null) {
+//            return "";
+//        }
+//        if (firstUrl.contains("http://")) {
+//            return firstUrl;
+//        }
+//        String result = MyApplication.getInstance().BASE_IMAGE_URL + firstUrl;
+//        return result;
+//    }
 
     public static float convertDpToPx(Context context, int dpValue) {
         return dpValue * context.getResources().getDisplayMetrics().density;
@@ -281,22 +282,22 @@ public class CommonUtils {
         return result;
     }
 
-    public static void showCustomToast(AppCompatActivity activity, String message, int duration) {
-        LayoutInflater inflater = activity.getLayoutInflater();
-        View layout = inflater.inflate(R.layout.toast_layout,
-                (ViewGroup) activity.findViewById(R.id.toast_layout_root));
-
-
-        TextView text = layout.findViewById(R.id.text);
-        if (message != null) {
-            text.setText(message);
-            Toast toast = new Toast(activity.getApplicationContext());
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -270);
-            toast.setDuration(duration);
-            toast.setView(layout);
-            toast.show();
-        }
-    }
+//    public static void showCustomToast(AppCompatActivity activity, String message, int duration) {
+//        LayoutInflater inflater = activity.getLayoutInflater();
+//        View layout = inflater.inflate(R.layout.toast_layout,
+//                (ViewGroup) activity.findViewById(R.id.toast_layout_root));
+//
+//
+//        TextView text = layout.findViewById(R.id.text);
+//        if (message != null) {
+//            text.setText(message);
+//            Toast toast = new Toast(activity.getApplicationContext());
+//            toast.setGravity(Gravity.CENTER_VERTICAL, 0, -270);
+//            toast.setDuration(duration);
+//            toast.setView(layout);
+//            toast.show();
+//        }
+//    }
 
     public static Bitmap getBitmapFromView(View view) {
         Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);

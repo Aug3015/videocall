@@ -5,18 +5,21 @@ import android.os.Parcelable;
 
 public class Friend implements Parcelable {
     private String name;
-    private boolean isChecked;
+    private boolean isChecked = false;
     private String avatar;
+    private int id;
 
-    public Friend(String name, String avatar) {
+    public Friend(String name, String avatar, int id) {
         this.name = name;
         this.avatar = avatar;
+        this.id = id;
     }
 
     protected Friend(Parcel in) {
         name = in.readString();
         isChecked = in.readByte() != 0;
         avatar = in.readString();
+        id = in.readInt();
     }
 
     public static final Creator<Friend> CREATOR = new Creator<Friend>() {
@@ -30,6 +33,14 @@ public class Friend implements Parcelable {
             return new Friend[size];
         }
     };
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -65,5 +76,6 @@ public class Friend implements Parcelable {
         dest.writeString(name);
         dest.writeByte((byte) (isChecked ? 1 : 0));
         dest.writeString(avatar);
+        dest.writeInt(id);
     }
 }

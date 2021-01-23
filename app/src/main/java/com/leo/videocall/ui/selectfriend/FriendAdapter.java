@@ -67,8 +67,11 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.FriendHold
             nameFriend.setText(friend.getName());
             Glide.with(context).load(friend.getAvatar()).into(ivAvatar);
 
-            friend.setChecked(!friend.isChecked());
-
+            if (friend.isChecked()) {
+                ivCheck.setImageResource(R.drawable.ic_checked);
+            } else {
+                ivCheck.setImageResource(R.drawable.ic_uncheck);
+            }
             itemView.setOnClickListener(v -> {
                 if (friend.isChecked()) {
                     friend.setChecked(false);

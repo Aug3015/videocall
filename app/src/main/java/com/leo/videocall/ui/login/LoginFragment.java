@@ -2,6 +2,7 @@ package com.leo.videocall.ui.login;
 
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -16,6 +17,10 @@ import butterknife.BindView;
 public class LoginFragment extends BaseFragment implements View.OnClickListener {
     @BindView(R.id.btnNext)
     ImageView btnNext;
+    @BindView(R.id.btnFriend)
+    TextView btnFriend;
+    @BindView(R.id.btnCallRoom)
+    TextView btnCallRoom;
 
     @Override
     protected void initPresenter() {
@@ -26,6 +31,8 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
     protected void setUp(View view) {
 
 
+        btnCallRoom.setOnClickListener(this);
+        btnFriend.setOnClickListener(this);
         btnNext.setOnClickListener(this);
     }
 
@@ -37,8 +44,11 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btnFriend:
             case R.id.btnNext:
                 replaceFragment(FriendFragment.getInstance());
+                break;
+            case R.id.btnCallRoom:
                 break;
         }
     }

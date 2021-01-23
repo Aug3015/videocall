@@ -8,9 +8,10 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-import tcom.trinhnd.foodcor.R;
-import tcom.trinhnd.foodcor.util.Constants;
-import tcom.trinhnd.foodcor.util.FontCache;
+import com.leo.videocall.R;
+import com.leo.videocall.utils.Constants;
+import com.leo.videocall.utils.FontCache;
+
 
 public class CustomTextViewFonts extends AppCompatTextView {
 
